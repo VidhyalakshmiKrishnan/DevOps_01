@@ -10,7 +10,7 @@ key_name = "dpp"
 //security_groups = [ "demo-sg" ]
 subnet_id = aws_subnet.dpp-public-subnet-01.id
 vpc_security_group_ids = [aws_security_group.demo-sg.id]
-for_each = [ "Jenkins-master", "Build-slave" ,"Ansible" ]
+for_each = toset([ "Jenkins-master", "Build-slave" ,"Ansible" ])
 tags = {
   name = "${each.key}" 
 }
