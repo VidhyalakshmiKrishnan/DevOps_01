@@ -2,3 +2,7 @@ terraform.tfstate
 terraform.tfstate.1744990806.backup
 terraform.tfstate.backup
 .terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/.terraform/*
+**/.terraform.lock.hcl
